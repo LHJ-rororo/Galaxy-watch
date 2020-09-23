@@ -66,7 +66,7 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     line-height: 1.78;
 }
 @media(max-width:769px){
-    #section01{
+    #section01,#section02,#section03{
         width: 100%;
         height: auto;
     }
@@ -82,7 +82,15 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     .flex-wrap-reverse{
         flex-wrap: wrap-reverse;
     }
+    .sec03-box{
+        width: 100%;
+    }
+    .img-comp-img img{
+        width: 500px;
+        height: auto;
+    }
 }
+
 
 
 /* 박스사이즈 */
@@ -116,3 +124,11 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     opacity: 0.7;
     border-radius: 50%;
   }
+
+.sec03-text-box{
+    margin-left: 500px;
+}
+
+.relative{
+    position: relative;
+}
