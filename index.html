@@ -42,7 +42,7 @@
 
 <section id="section01" class="flex-align">
     <div class="container">
-        <div class="row flex-align">
+        <div class="row flex-align sec01-img">
             <div class="col-sm-6 flex-align wow fadeInLeft">
                 <img src="images/Watch2.webp" alt="갤럭시워치 사진">
             </div>
@@ -122,110 +122,139 @@
 <!-- section02 -->
 <section id="section03">
     <div class="container">
-        <div class="row flex-align">
-            <div class="col-sm-3 img-comp-container container relative wow fadeInLeft sec03-box">
-                    <div class="img-comp-img">
-                    <img src="images/day-sun-watch.jpg" width="720" height="810" alt="낮 워치 사진">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ba-slider">
+                    <img src="images/day-sun-watch.jpg" alt="" height="700">       
+                    <div class="resize">
+                      <img src="images/day-night-watch.jpg" alt="" height="700">
                     </div>
-                    <div class="img-comp-img img-comp-overlay">
-                    <img src="images/day-night-watch.jpg" width="720" height="810" alt="밤 워치 사진">
-                    </div>
-                </div>
-            <div class="col-sm-9 text-center wow fadeInLeft sec03-box">
-                <div class="sec03-text-box">
-                    <h1 class="text-title">데일리 브리핑</h1>
-                    <p>하루의 시작과 끝을 함께합니다.
-                        매일 아침 날씨, 스케쥴, 리마인더 등 필요한 정보를 알려주며,
-                        자기 전에는 완료되지 못한 리마인더와 그 날의 활동량을 알려줍니다.</p>
-                </div>
+                    <span class="handle"></span>
+                  </div>
             </div>
+            <div class="col-sm-4">
+                
+            </div>
+        </div>
     </div>
+
+</div>
+<div class="section03-txt">
+    <h1>데일리 브리핑</h1>
+    <p>하루의 시작과 끝을 함께합니다. <br>
+        매일 아침 날씨, 스케쥴, 리마인더 등 필요한 정보를 알려주며, <br>
+        자기 전에는 완료되지 못한 리마인더와 그 날의 활동량을 알려줍니다.</p>
 </div>
 <script>
-    function initComparisons() {
-  var x, i;
-  /* Find all elements with an "overlay" class: */
-  x = document.getElementsByClassName("img-comp-overlay");
-  for (i = 0; i < x.length; i++) {
-    /* Once for each "overlay" element:
-    pass the "overlay" element as a parameter when executing the compareImages function: */
-    compareImages(x[i]);
-  }
-  function compareImages(img) {
-    var slider, img, clicked = 0, w, h;
-    /* Get the width and height of the img element */
-    w = img.offsetWidth;
-    h = img.offsetHeight;
-    /* Set the width of the img element to 50%: */
-    img.style.width = (w / 2) + "px";
-    /* Create slider: */
-    slider = document.createElement("DIV");
-    slider.setAttribute("class", "img-comp-slider");
-    /* Insert slider */
-    img.parentElement.insertBefore(slider, img);
-    /* Position the slider in the middle: */
-    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
-    /* Execute a function when the mouse button is pressed: */
-    slider.addEventListener("mousedown", slideReady);
-    /* And another function when the mouse button is released: */
-    window.addEventListener("mouseup", slideFinish);
-    /* Or touched (for touch screens: */
-    slider.addEventListener("touchstart", slideReady);
-     /* And released (for touch screens: */
-    window.addEventListener("touchend", slideFinish);
-    function slideReady(e) {
-      /* Prevent any other actions that may occur when moving over the image: */
-      e.preventDefault();
-      /* The slider is now clicked and ready to move: */
-      clicked = 1;
-      /* Execute a function when the slider is moved: */
-      window.addEventListener("mousemove", slideMove);
-      window.addEventListener("touchmove", slideMove);
-    }
-    function slideFinish() {
-      /* The slider is no longer clicked: */
-      clicked = 0;
-    }
-    function slideMove(e) {
-      var pos;
-      /* If the slider is no longer clicked, exit this function: */
-      if (clicked == 0) return false;
-      /* Get the cursor's x position: */
-      pos = getCursorPos(e)
-      /* Prevent the slider from being positioned outside the image: */
-      if (pos < 0) pos = 0;
-      if (pos > w) pos = w;
-      /* Execute a function that will resize the overlay image according to the cursor: */
-      slide(pos);
-    }
-    function getCursorPos(e) {
-      var a, x = 0;
-      e = e || window.event;
-      /* Get the x positions of the image: */
-      a = img.getBoundingClientRect();
-      /* Calculate the cursor's x coordinate, relative to the image: */
-      x = e.pageX - a.left;
-      /* Consider any page scrolling: */
-      x = x - window.pageXOffset;
-      return x;
-    }
-    function slide(x) {
-      /* Resize the image: */
-      img.style.width = x + "px";
-      /* Position the slider: */
-      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
-    }
-  }
+    // Call & init
+$(document).ready(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    // Adjust the slider
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+    // Bind dragging events
+    drags(cur.find('.handle'), cur.find('.resize'), cur);
+  });
+});
+
+// Update sliders on resize. 
+// Because we all do this: i.imgur.com/YkbaV.gif
+$(window).resize(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+  });
+});
+
+function drags(dragElement, resizeElement, container) {
+	
+  // Initialize the dragging event on mousedown.
+  dragElement.on('mousedown touchstart', function(e) {
+    
+    dragElement.addClass('draggable');
+    resizeElement.addClass('resizable');
+    
+    // Check if it's a mouse or touch event and pass along the correct value
+    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+    
+    // Get the initial position
+    var dragWidth = dragElement.outerWidth(),
+        posX = dragElement.offset().left + dragWidth - startX,
+        containerOffset = container.offset().left,
+        containerWidth = container.outerWidth();
+ 
+    // Set limits
+    minLeft = containerOffset + 10;
+    maxLeft = containerOffset + containerWidth - dragWidth - 10;
+    
+    // Calculate the dragging distance on mousemove.
+    dragElement.parents().on("mousemove touchmove", function(e) {
+    	
+      // Check if it's a mouse or touch event and pass along the correct value
+      var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      
+      leftValue = moveX + posX - dragWidth;
+      
+      // Prevent going off limits
+      if ( leftValue < minLeft) {
+        leftValue = minLeft;
+      } else if (leftValue > maxLeft) {
+        leftValue = maxLeft;
+      }
+      
+      // Translate the handle's left value to masked divs width.
+      widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+			
+      // Set the new values for the slider and the handle. 
+      // Bind mouseup events to stop dragging.
+      $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+        $(this).removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      $('.resizable').css('width', widthValue);
+    }).on('mouseup touchend touchcancel', function(){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+    e.preventDefault();
+  }).on('mouseup touchend touchcancel', function(e){
+    dragElement.removeClass('draggable');
+    resizeElement.removeClass('resizable');
+  });
 }
 
+
+
 </script>
-<script>
-    initComparisons();
-</script>    
 </section>
-<!-- section03 -->
-<section>
+<!-- section03 end -->
+<!-- section04 -->
+<section id="section04">
+    <div class="container sec04-container">
+        <div class="row relative">
+            <div class="col-sm-9 sec04-img">
+                <img src="images/galaxy-watch-r800-cashBee-icon.png" alt="캐시비" class="absolute-left move-up-down
+                ">
+                <img src="images/galaxy-watch-r800-giney-icon.png" alt="지니" class="absolute-left move-up-down">
+                <img src="images/galaxy-watch-r800-b-icon.png" alt="" class="absolute-left  move-up-down">
+                <img src="images/galaxy-watch-r800-melon-icon.png" alt="" class="absolute-right  move-up-down">
+                <img src="images/galaxy-watch-r800-naver-icon.png" alt="" class="absolute-right  move-up-down">
+                <img src="images/galaxy-watch-r800-Tmoney-icon.png" alt="" class="absolute-right move-up-down">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="text-box text-center">
+                <h1 class="text-title">갤럭시 워치를 위한 수많은 앱</h1>
+                <p>이미 갤럭시 워치를 위한 수많은 전용 앱이 준비되어 있습니다.
+                    필요한 앱을 찾아서 설치하고 더 스마트한 삶을 누리세요.</p>
+            </div>
+        </div>
+    </div>
+
 
 </section>
 <!-- section04 -->
