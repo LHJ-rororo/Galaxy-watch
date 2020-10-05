@@ -253,9 +253,10 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 /* section04 start */
 #section04{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
 
 }
+
 
 .sec04-container{
     width: 100%;
@@ -280,4 +281,13 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
       100% {
         top:30px;
       }
+}
+
+
+#section05{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/galaxy-watch3-black.webp);
+    background-repeat: no-repeat;
+    background-position: center;
 }
