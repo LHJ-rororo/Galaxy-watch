@@ -8,6 +8,12 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 .navbar{
     margin: 0;
 }
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
 .white-text{
     color: #fff;
 }
@@ -19,12 +25,36 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     font-weight: bold;
     font-size: 50px;
 }
-
+.sec02-img{
+    margin: 40px 0;
+    width: 100vh;
+}
+.line{
+    display: block;
+    width: 50px;
+    height: 6px;
+    border: 1px solid #181818;
+    border-radius: 25%;
+    margin: 30px 0;
+    background: #181818;
+}
+.flex-none{
+    display: block;
+    flex-direction: column;
+}
 .flex-align {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.justify{
+    display: flex !important;
+    justify-content: center !important;
 }
 .btn{
     cursor: pointer;
@@ -88,6 +118,7 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     .sec03-box{
         width: 100%;
     }
+
     .img-comp-img img{
         width: 500px;
         height: auto;
@@ -135,9 +166,7 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     border-radius: 50%;
   }
 
-.sec03-text-box{
-    margin-left: 500px;
-}
+
 
 .relative{
     position: relative;
@@ -165,12 +194,24 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 #section03{
     /* background: #000; */
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
 }
 .section03-txt{
     text-align: center;
     font-family: 'IBMPlexSansKR-Regular';
     padding-top: 2%;
+}
+.watches{
+    display: block;
+}
+.watches01{
+    display: none;
+}
+.watches02{
+    display: none;
+}
+.watches03{
+    display: none;
 }
 .section03-txt h1{
     font-weight: bold;
@@ -183,6 +224,73 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     line-height: 22px;
     margin: 1% 0 2%;
 }
+.sec03-01,.sec03-05{
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    
+}
+.sec03-02,.sec03-04{
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+}
+.sec03-01{
+    left: 30rem;
+    display: block;
+}
+.sec03-02{
+    left: 50rem;
+    display: block;
+}
+.sec03-03{
+    position: relative;
+    left: 75rem;
+    z-index: 3;
+    display: block;
+
+}
+.sec03-04{
+    top: 0;
+    right: 50rem;
+    display: block;
+}
+.sec03-05{
+    top: 0;
+    right: 30rem;
+    display: block;
+}
+
+/* 애니메이션
+.lift30, .lift10{
+    animation-duration:1s;
+      animation-duration: leaner;
+      animation-direction:alternate;
+      animation-fill-mode: forwards;
+}
+
+.lift30{    animation-name: lift30;}
+.lift10 {animation-name: lift10;}
+@keyframes lift30{
+    0%{
+        
+    }
+    100%{
+        left: 30rem;
+    }
+}
+
+@keyframes lift10{
+    0%{
+        
+    }
+    100%{
+        left: 50rem;
+    }
+} 
+애니메이션 */
 @import "lesshat";
 
 .ba-slider {
@@ -253,14 +361,19 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 /* section04 start */
 #section04{
     width: 100%;
-    height: 120vh;
-
+    height: 100vh;
+    background: url(../images/mauntiong.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
-.sec04-container{
+
+/* section05 start */
+.sec05-container{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background: url(../images/galaxy-watch-r800-bg.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -284,10 +397,11 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 }
 
 
-#section05{
+#section06{
     width: 100%;
     height: 100vh;
     background: url(../images/galaxy-watch3-black.webp);
     background-repeat: no-repeat;
     background-position: center;
 }
+
