@@ -89,17 +89,20 @@ new WOW (). init ();
             $(".watches01").css('display','block');
             $(".watches02").css('display','none');
             $(".watches03").css('display','none');
+            $(".watches2").css('display','none');
         });
         $(".button02").click(function() {
             $(".watches").css('display','none');
             $(".watches01").css('display','none');
             $(".watches02").css('display','block');
             $(".watches03").css('display','none');
+            $(".watches2").css('display','none');
       });
         $(".button03").click(function() {
             $(".watches").css('display','none');
             $(".watches01").css('display','none');
             $(".watches02").css('display','none');
             $(".watches03").css('display','block');
+            $(".watches2").css('display','none');
         });
       });

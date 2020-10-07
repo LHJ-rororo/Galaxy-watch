@@ -35,7 +35,7 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     height: 6px;
     border: 1px solid #181818;
     border-radius: 25%;
-    margin: 30px 0;
+    margin: 30px auto;
     background: #181818;
 }
 .flex-none{
@@ -55,6 +55,9 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 .justify{
     display: flex !important;
     justify-content: center !important;
+}
+.fas{
+    padding-right: 15px;
 }
 .btn{
     cursor: pointer;
@@ -95,43 +98,6 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     font-size: 18px;
     line-height: 1.78;
 }
-@media(max-width:769px){
-    #section01,#section02,#section03{
-        width: 100%;
-        height: auto;
-    }
-    .sec01-img img{
-        width: 100%;
-    }
-    .content-img{
-        width: 100%;
-    }
-    .content-img img{
-        width: 100%;
-    }
-    .text-box{
-        width: 100%;
-    }
-    .flex-wrap-reverse{
-        flex-wrap: wrap-reverse;
-    }
-    .sec03-box{
-        width: 100%;
-    }
-
-    .img-comp-img img{
-        width: 500px;
-        height: auto;
-    }
-    .text-title{
-        margin: 0;
-    }
-
-    .sec04-img{
-        display: none;
-    }
-}
-
 
 
 /* 박스사이즈 */
@@ -201,6 +167,12 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     font-family: 'IBMPlexSansKR-Regular';
     padding-top: 2%;
 }
+.sec03-box-margin {
+    padding: 185px 0;
+}
+.text-box,.sec03-h1-margin {
+    padding-top: 20px;
+}
 .watches{
     display: block;
 }
@@ -212,6 +184,36 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 }
 .watches03{
     display: none;
+}
+
+.btn-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn-box button{
+    margin: 50px 10px;
+}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	padding: 15px 80px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 .section03-txt h1{
     font-weight: bold;
@@ -262,35 +264,9 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     right: 30rem;
     display: block;
 }
-
-/* 애니메이션
-.lift30, .lift10{
-    animation-duration:1s;
-      animation-duration: leaner;
-      animation-direction:alternate;
-      animation-fill-mode: forwards;
+.watches2{
+    display: none
 }
-
-.lift30{    animation-name: lift30;}
-.lift10 {animation-name: lift10;}
-@keyframes lift30{
-    0%{
-        
-    }
-    100%{
-        left: 30rem;
-    }
-}
-
-@keyframes lift10{
-    0%{
-        
-    }
-    100%{
-        left: 50rem;
-    }
-} 
-애니메이션 */
 @import "lesshat";
 
 .ba-slider {
@@ -366,17 +342,23 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
 
 /* section05 start */
+#section05{
+    width: 100%;
+    height: auto;
+}
 .sec05-container{
     width: 100%;
-    height: 120vh;
-    background: url(../images/galaxy-watch-r800-bg.png);
+    height: 130vh;
+    /* background: url(../images/galaxy-watch-r800-bg.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+    background-size: 100%; */
 }
 .move-up-down{
     animation-name: updown;
@@ -396,6 +378,13 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
       }
 }
 
+.sec05-img2{
+    display: flex;
+    justify-content: center;
+}
+.sec05-img2 img{
+    width: 80%;
+}
 
 #section06{
     width: 100%;
@@ -403,5 +392,78 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     background: url(../images/galaxy-watch3-black.webp);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media(max-width:767px){
+    #section01,#section02,#section03{
+        width: 100%;
+        height: auto;
+    }
+    .sec01-img img{
+        width: 100%;
+    }
+    .content-img{
+        width: 100%;
+    }
+    .content-img img{
+        width: 100%;
+    }
+    .text-box{
+        width: 100%;
+    }
+    .flex-wrap-reverse{
+        flex-wrap: wrap-reverse;
+    }
+
+    /* section03 */
+    .sec03-box{
+        width: 100%;
+    }
+
+    .sec03-box-margin {
+        padding: 30px 0;
+    }
+    .watches01 div img,.watches02 div img,.watches03 div img{
+        width: 100%;
+        height: auto;
+    }
+    .btn-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-box button {
+        margin: 10px 10px;
+    }
+
+    .img-comp-img img{
+        width: 500px;
+        height: auto;
+    }
+
+
+    .sec02-text,.watches2{
+        width: 100%;
+    }
+    .emty{
+        height: 50px;
+        padding: 50px 0;
+    }
+
+
+
+    /* sec05 */
+    .watches img{
+        display: none;
+    }
+    .watches2{
+        display: block;
+    }
+    .sec05-container {
+        width: 100%;
+        height: 100vh;
+    }
+    .sec05-img2 img{
+        width: 100%;
+    }
 }
 
