@@ -31,6 +31,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper -->
   
     <script>
       $(document).ready(function(){
@@ -98,19 +104,87 @@
     <div class="emty"></div>
 </section>
 <!-- section02 end-->
+<!-- section02.5 start-->
+<section id="section02.5">
+    <div class="container">
+        <div class="row">
+            <div class="emty"></div>
+            <div class="emty"></div>
+            <h1 class="text-title text-center">스트랩 교체로 스타일 변신</h1>
+            <div class="line"></div>
+            <p class="ex-p text-center wow animate fadeInUp">손목과 하나된 듯 부드러운 기본 스트랩과 다양한 스트랩으로
+                매일 옷을 갈아 입듯 색다른 스타일을 연출해보세요.
+                </p>
+                <div class="emty"></div>
+                <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/strap1.webp" alt="스트랩1" class="strap-size">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/strap2.webp" alt="스트랩2"class="strap-size">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/strap3.webp" alt="스트랩3" class="strap-size">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/strap4.webp" alt="스트랩4" class="strap-size">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/strap5.webp" alt="스트랩5" class="strap-size">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/strap6.webp" alt="스트랩6" class="strap-size">
+                </div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Swiper JS -->
+            <script src="../package/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                });
+            </script>
+        </div>
+    </div>
+
+</section>
+<!-- section02.5 end-->
 <!-- section03 start -->
 <section id="section03">
     <div class="container-fluid">
 
             <div class="col-sm-12">
+                <div class="emty"></div>
+                <div class="emty"></div>
                 <h1 class="text-title text-center">매일매일을 더욱 특별하게!</h1>
                 <div style="margin: 100px auto;"></div>
                 <div class="watches relative">
-                    <img src="images/sec03-01.webp" alt="" class="sec03-01 wow fadeInLeft">
-                    <img src="images/sec03-02.png" alt="" class="sec03-02 wow fadeInLeft">
-                    <img src="images/sec03-03.png" alt="" class="sec03-03 wow fadeIn">
-                    <img src="images/sec03-04.png" alt="" class="sec03-04 wow fadeInRight">
-                    <img src="images/sec03-05.webp" alt="" class="sec03-05 wow fadeInRight">
+                    <img src="images/sec03-01.webp" alt="워치1" class="sec03-01 wow fadeInLeft">
+                    <img src="images/sec03-02.png" alt="워치2" class="sec03-02 wow fadeInLeft">
+                    <img src="images/sec03-03.png" alt="워치3" class="sec03-03 wow fadeIn">
+                    <img src="images/sec03-04.png" alt="워치4" class="sec03-04 wow fadeInRight">
+                    <img src="images/sec03-05.webp" alt="워치5" class="sec03-05 wow fadeInRight">
                 </div>
                 <div class="watches2">
                     <img src="images/sec03-(3).png" alt="축소된 워치들 이미지">
@@ -172,7 +246,7 @@
                     <button type="button" onclick="button02" class="btn button03 myButton"><i class="fas fa-moon"></i>수면과 휴식 개선</button>
                 </div>
 
-                
+                <div class="emty"></div>
 
                 </div>
 
@@ -202,8 +276,30 @@
 </div>
 
 </section>
-
 <!-- section04 end-->
+<!-- section04.5 start -->
+<section id="section04-5">
+    <div class="container relative">
+        <div class="row">
+            <div class="sec045-box col-sm-6 relative">
+                <img src="images/water__Watch2.png" alt="방수_갤럭시워치1" class="sec4-5-watch-1 absolute waterWa2-move-up-down">
+                <img src="images/sec4.5-watch.png" alt="방수_갤럭시워치2" class="sec4-5-watch-2 absolute water1-move-up-down">
+                <img src="images/water-proof-water-effect-02.png" alt="워터이펙트1" class="sec4-5-water-1 absolute water1-move-up-down">
+                <img src="images/water-proof-water-effect-03.png" alt="워터이펙트1" class="sec4-5-water-2 absolute water2-move-up-down">
+            </div>
+            <div class="col-sm-6">
+                <div class="sec045-text-box">
+                    <h1 class="text-title">방수와 충격에 강한 내구성</h1>
+                    <div class="line"></div>
+                    <p class="ex-p">비가 와도 눈이 와도 문제없습니다.
+                        5ATM 및 IP68의 방수방진 등급을 갖춰 다양한 환경에서 걱정 없이 사용할 수 있습니다.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section04.5 end-->
 <!-- section05 start -->
 <section id="section05 relative">
     <div class="container sec05-container relative">
@@ -220,7 +316,7 @@
                     <img src="images/galaxy-watch-r800-bg.png" alt="" class="absolute">
                 </div>
                 <div class="sec05-img2 relative">
-                    <img src="images/galaxy-watch-apps.png" alt="" class="absolute move-up-down">
+                    <img src="images/galaxy-watch-apps.png" alt="" class="absolute wow fadeInDown">
                 </div>
             </div>
         </div>

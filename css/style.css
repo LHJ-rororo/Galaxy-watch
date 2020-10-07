@@ -1,47 +1,25 @@
 body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 
-
-#section01{
-    width: 100%;
-    height: 100vh;
-}
-.navbar{
-    margin: 0;
-}
+/* 공용css */
+/* 릴리티브,앱솔루트설정 */
 .relative{
     position: relative;
 }
 .absolute{
     position: absolute;
 }
-.white-text{
-    color: #fff;
+.absolute-left{
+    position: absolute;
+    left: 15%;
+    top: 50px;
 }
-.black-text{
-    color: #000;
+.absolute-right{
+    position: absolute;
+    left: 15%;
+    top: 0
 }
 
-.text-title{
-    font-weight: bold;
-    font-size: 50px;
-}
-.sec02-img{
-    margin: 40px 0;
-    width: 100vh;
-}
-.line{
-    display: block;
-    width: 50px;
-    height: 6px;
-    border: 1px solid #181818;
-    border-radius: 25%;
-    margin: 30px auto;
-    background: #181818;
-}
-.flex-none{
-    display: block;
-    flex-direction: column;
-}
+/* 플랙스설정 */
 .flex-align {
     display: flex;
     align-items: center;
@@ -52,10 +30,68 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     display: flex;
     flex-direction: column;
 }
+.flex-none{
+    display: block;
+    flex-direction: column;
+}
+
 .justify{
     display: flex !important;
     justify-content: center !important;
 }
+
+/* 마진,패딩설정 */
+.margin-30{
+    margin: 30px;
+}
+.padding-10{
+    padding: 10px;
+}
+
+
+/* 공백설정 */
+.emty{
+    height: 50px;
+    padding: 50px 0;
+}
+/* 폰트크기 */
+.text-title{
+    font-weight: bold;
+    font-size: 50px;
+}
+.ex-p{
+    font-size: 18px;
+    line-height: 1.78;
+}
+/* 글자색깔 */
+.white-text{
+    color: #fff;
+}
+.black-text{
+    color: #000;
+}
+
+/* 글자사이줄설정 */
+.line{
+    display: block;
+    width: 50px;
+    height: 6px;
+    border: 1px solid #181818;
+    border-radius: 25%;
+    margin: 30px auto;
+    background: #181818;
+}
+/* 공용css */
+
+/* -----section01 start----- */
+#section01{
+    width: 100%;
+    height: 100vh;
+}
+.navbar{
+    margin: 0;
+}
+
 .fas{
     padding-right: 15px;
 }
@@ -77,16 +113,16 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     background: #0071e3;
     color: #fff;
 }
-.margin-30{
-    margin: 30px;
-}
-.padding-10{
-    padding: 10px;
-}
+/* -----section01 end----- */
+/* -----section02 start----- */
 
 #section02, #section03{
     width: 100%;
     height: 100vh;
+}
+.sec02-img{
+    margin: 40px 0;
+    width: 100vh;
 }
 .content-img{
     width: 33%;
@@ -94,10 +130,7 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 .content-img img{
     width: 100%;
 }
-.ex-p{
-    font-size: 18px;
-    line-height: 1.78;
-}
+
 
 
 /* 박스사이즈 */
@@ -134,20 +167,6 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 
 
 
-.relative{
-    position: relative;
-}
-.absolute-left{
-    position: absolute;
-    left: 15%;
-    top: 50px;
-}
-.absolute-right{
-    position: absolute;
-    left: 15%;
-    top: 0
-}
-
 @import "lesshat";
 
 .ba-slider {
@@ -155,8 +174,56 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     overflow: hidden;
 }
 
+/* -----section02 end----- */
+/* -----section02.5 start----- */
 
-/* section03 */
+/* swiper-css start */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.strap-size{
+    width: 100%;
+}
+/* swiper-css end */
+/* -----section02.5 end----- */
+/* -----section03 start----- */
 #section03{
     /* background: #000; */
     width: 100%;
@@ -333,8 +400,36 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     font-size:30px;
 }
 
+.sec03-box{
+    width: 100%;
+}
 
-/* section04 start */
+.sec03-box-margin {
+    padding: 300px 0;
+}
+.watches01 div img,.watches02 div img,.watches03 div img{
+    width: 100%;
+    height: auto;
+}
+
+.btn-box button {
+    margin: 10px 10px;
+}
+
+.img-comp-img img{
+    width: 500px;
+    height: auto;
+}
+
+
+.sec02-text,.watches2{
+    width: 100%;
+}
+
+
+
+/* -----section03 end----- */
+/* -----section04 start----- */
 #section04{
     width: 100%;
     height: 100vh;
@@ -346,8 +441,114 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
 }
 
 
+/* -----section04 end----- */
+/* -----section04.5 start----- */
+#section04-5{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/water-proof-water-effect-01.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 56%;
+}
 
-/* section05 start */
+.sec045-text-box {
+    padding: 60% 0;
+}
+.sec4-5-watch-1, .sec4-5-watch-2 {
+    top: 150px;
+    left: -100px;
+}
+
+.sec4-5-water-1 {
+    top: 130px;
+    right: 10px;
+}
+.sec4-5-water-2 {
+    top: 350px;
+    left: -90px;
+}
+
+/* 애니메이션 시작 */
+/* 물방울 애니메이션 */
+.water1-move-up-down{
+    animation-name: water1-move-up-down;
+    animation-duration:2.5s;
+      animation-duration: leaner;
+      animation-direction:alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+}
+@keyframes water1-move-up-down{
+    0% {
+        top: 150px;
+      }
+
+      100% {
+        top: 160px;
+      }
+}
+
+.water2-move-up-down{
+    animation-name: water2-move-up-down;
+    animation-duration:2.5s;
+      animation-duration: leaner;
+      animation-direction:alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+}
+@keyframes water2-move-up-down{
+    0% {
+        top: 370px;
+      }
+
+      100% {
+        top: 350px;
+      }
+}
+/* 시계 애니메이션 */
+.waterWa1-move-up-down{
+    animation-name: waterWa1-move-up-down;
+    animation-duration:3s;
+      animation-duration: leaner;
+    animation-iteration-count:3;
+      animation-direction:alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+}
+@keyframes waterWa1-move-up-down{
+    0% {
+        top: 130px;
+      }
+
+      100% {
+        top: 160px;
+      }
+}
+
+.waterWa2-move-up-down{
+    animation-name: waterWa2-move-up-down;
+    animation-duration:3s;
+      animation-duration: leaner;
+    animation-iteration-count:3;
+      animation-direction:alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+}
+@keyframes waterWa2-move-up-down{
+    0% {
+        top: 160px;
+      }
+
+      100% {
+        top: 130px;
+      }
+}
+
+/* 애니메이션 끝 */
+
+/* -----section04.5 end----- */
+/* -----section05 start----- */
 #section05{
     width: 100%;
     height: auto;
@@ -386,6 +587,8 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     width: 80%;
 }
 
+/* -----section05 end----- */
+/* -----section06 start----- */
 #section06{
     width: 100%;
     height: 100vh;
@@ -393,6 +596,10 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/* -----section06 end----- */
+
+/* -----Media start----- */
 
 @media(max-width:767px){
     #section01,#section02,#section03{
@@ -414,43 +621,24 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     .flex-wrap-reverse{
         flex-wrap: wrap-reverse;
     }
-
-    /* section03 */
-    .sec03-box{
-        width: 100%;
-    }
-
+    /* sec03 */
     .sec03-box-margin {
-        padding: 30px 0;
-    }
-    .watches01 div img,.watches02 div img,.watches03 div img{
-        width: 100%;
-        height: auto;
+        padding: 10px 0;
     }
     .btn-box {
         display: flex;
         flex-direction: column;
     }
-    .btn-box button {
-        margin: 10px 10px;
-    }
-
-    .img-comp-img img{
-        width: 500px;
-        height: auto;
-    }
-
-
-    .sec02-text,.watches2{
+    /* sec04.5 */
+    .sec045-box img{
         width: 100%;
     }
-    .emty{
-        height: 50px;
-        padding: 50px 0;
+    .sec4-5-watch-2{
+        display: none;
     }
-
-
-
+    .sec045-text-box {
+        padding-top: 515px;
+    }
     /* sec05 */
     .watches img{
         display: none;
@@ -465,5 +653,10 @@ body,h1,h2,h3,p{font-family: 'Noto Sans KR', sans-serif;}
     .sec05-img2 img{
         width: 100%;
     }
+    .emty{
+        height: 0;
+        padding: 10px 0 ;
+    }
 }
 
+/* -----Media end----- */
