@@ -106,3 +106,67 @@ new WOW (). init ();
             $(".watches2").css('display','none');
         });
       });
+
+
+// 부드럽게 해당 메뉴로 이동
+
+$(function(){
+  $(function () {
+          $('#aroowTOtop').click(function () {
+              var offset = $('#topPage').offset();
+              $('html,body').animate({scrollTop:offset.top},600);
+          });
+      });
+});
+
+$(function(){
+  $(function () {
+          $('#character').click(function () {
+              var offset = $('#section03').offset();
+              $('html,body').animate({scrollTop:offset.top},600);
+          });
+      });
+});
+
+$(function(){
+  $(function () {
+          $('#Specification').click(function () {
+              var offset = $('#section07').offset();
+              $('html,body').animate({scrollTop:offset.top},600);
+          });
+      });
+});
+
+// 스펙아코디언메뉴
+$(document).ready(function() {
+  $(".set > p").on("click", function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this)
+        .siblings(".content")
+        .slideUp(200);
+      $(".set > p i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+    } else {
+      $(".set > p i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+      $(this)
+        .find("i")
+        .removeClass("fa-plus")
+        .addClass("fa-minus");
+      $(".set > p").removeClass("active");
+      $(this).addClass("active");
+      $(".content").slideUp(200);
+      $(this)
+        .siblings(".content")
+        .slideDown(200);
+        
+    };
+  });
+});
+
+$(function(){
+  $( '.css_test' ).slideUp(200)
+})
