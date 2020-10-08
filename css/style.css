@@ -794,6 +794,9 @@ body {
     .flex-wrap-reverse{
         flex-wrap: wrap-reverse;
     }
+    .media-watches{
+        width: 100%;
+    }
     /* sec03 */
     .sec03-box-margin {
         padding: 10px 0;
@@ -825,7 +828,7 @@ body {
     }
     .sec05-container {
         width: 100%;
-        height: 65vh;
+        height: 72vh;
     }
     .sec05-img2 img{
         width: 100%;
